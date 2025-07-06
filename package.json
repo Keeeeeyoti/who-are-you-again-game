@@ -1,36 +1,40 @@
 {
   "name": "who-are-you-again",
   "version": "1.0.0",
-  "main": "expo-router/entry",
+  "homepage": "https://keeeeeyoti.github.io/who-are-you-again-game/",
+  "main": "index.js",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "build:web": "expo export --platform web",
-    "deploy": "npm run build:web && gh-pages -d web-build"
+    "build:web": "npx expo export:web",
+    "deploy": "npm run build:web && node fix-paths.js && gh-pages -d web-build"
   },
   "dependencies": {
+    "@expo/vector-icons": "^14.0.0",
+    "crypto-browserify": "^3.12.1",
     "expo": "~50.0.0",
-    "expo-status-bar": "~1.11.1",
-    "expo-router": "~3.4.0",
-    "expo-linking": "~6.2.2",
     "expo-constants": "~15.4.5",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
+    "expo-linear-gradient": "~12.7.2",
+    "expo-linking": "~6.2.2",
+    "expo-router": "~3.4.0",
+    "expo-status-bar": "~1.11.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-native": "0.73.6",
-    "react-native-web": "~0.19.10",
+    "react-native-reanimated": "~3.6.2",
     "react-native-safe-area-context": "4.8.2",
     "react-native-screens": "~3.29.0",
-    "@expo/vector-icons": "^14.0.0",
-    "react-native-reanimated": "~3.6.2",
-    "expo-linear-gradient": "~12.7.2"
+    "react-native-web": "~0.19.10",
+    "stream-browserify": "^3.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
+    "@expo/webpack-config": "^19.0.1",
     "@types/react": "~18.2.45",
-    "typescript": "^5.1.3",
-    "gh-pages": "^6.1.1"
+    "gh-pages": "^6.1.1",
+    "typescript": "^5.1.3"
   },
   "private": true
-} 
+}
